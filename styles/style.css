@@ -1,0 +1,171 @@
+.wrapper {
+    width: 1160px;
+    height: auto;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 1160px;
+    height: 72px;
+    background: rgba(94, 93, 88, 0.6);
+    position: fixed;
+}
+
+.navbar {
+    display: flex;
+    width: 61%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.labelBar img {
+    max-width: 140px;
+    height: 72px;
+}
+
+.naviBar {
+    display: flex;
+    max-width: 630px;
+    align-items: center;
+}
+
+.menu-item {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 13px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.menu-item img {
+    width: 12px;
+    height: 10px;
+}
+
+.menu-item:hover {
+    color: #18CFAB;
+}
+
+.menu-item::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #18CFAB;
+    bottom: -26px;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 0.35s ease;
+}
+
+.menu-item:hover:after {
+    transform: scaleX(1);
+}
+
+.parallax {
+    width: 1160px;
+    min-height: 637px;
+    background-image: url("../images/Step Project Ham/Sections background/section-1(header).jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*z-index: -1;*/
+}
+
+.creative {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*top: 35%*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+
+    width: 100%;
+    /*height: 534px;*/
+
+}
+
+.article-box > p {
+    margin-bottom: 8px;
+}
+
+.creative-line-one {
+    font-size: 21px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.creative-line-one span {
+    color: #18CFAB;
+}
+
+.creative-line-two {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 47px;
+    font-weight: 700;
+
+}
+
+.creative-line-three {
+    color: #D4D4D4;
+    text-transform: capitalize;
+    font-size: 21px;
+    font-weight: 400;
+}
+.ex-pur-container {
+    margin-top: 50px;
+}
+
+.exPurButton {
+    width: 111px;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 15px;
+    border: none;
+    border-top: 2px solid #fff;
+    border-radius: 7px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+}
+
+.exPurButton:hover {
+    background-color: rgba(0, 203, 246, 0.71);
+    transition: .2s;
+}
+
+.exPurButton:active {
+    background-color: rgba(7, 73, 103, 0.88);
+    border: none;
+    transform: translateY(-2px);
+    box-shadow: 0 1px #000;;
+}
+
+.explore {
+    background-color: #18CFAB;
+}
+
+.purchase {
+    background-color: #00CBF6;
+}
