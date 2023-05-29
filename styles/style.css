@@ -166,9 +166,10 @@
 
 .squares {
     text-transform: uppercase;
-    position: absolute;
+    position: relative;
     left: 0;
     width: 100%;
+    height: 50%;
     display: flex;
     --width: 100%;
     --height: calc(var(--width) / 4);
@@ -195,7 +196,7 @@
 
 .squareItem p {
 position: absolute;
-top: 80%;
+top: 75%;
 }
 
 .finger {
@@ -217,4 +218,19 @@ top: 80%;
 .devices {
     background-color: #18CFAB;
     color: #fff;
+}
+
+/* -------------------------OUR SERVICES----------------------------------------- */
+.our-services {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* padding: 92px 5px; */
+}
+
+.title {
+    margin: 92px auto;
+    font-size: 34px;
+    font-weight: 400;
+    color: #4E4E4E;
 }
