@@ -165,32 +165,56 @@
 }
 
 .squares {
+    text-transform: uppercase;
     position: absolute;
     left: 0;
     width: 100%;
     display: flex;
     --width: 100%;
-    --height: calc((var(--width) - 25%) / 4);
+    --height: calc(var(--width) / 4);
+    /* --height: calc(--result - 25%); */
+    /* width: var(--width); */
     height: var(--height);
 }
 
-.squareItem {
+.squareItem  {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.25s;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.squareItem:hover {
+    border-color: #fff;
+}
+
+.squareItem p {
+position: absolute;
+top: 80%;
 }
 
 .finger {
     background-color: #1C2A33;
+    color: #18CFAB;
+    
 }
 
 .diamante {
     background-color: #18CFAB;
+    color: #fff;
 }
 
 .lamp {
     background-color: #1C2A33;
+    color: #18CFAB;
 }
 
 .devices {
     background-color: #18CFAB;
+    color: #fff;
 }
