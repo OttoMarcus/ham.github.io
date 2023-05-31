@@ -8,13 +8,13 @@
     background-size: cover;
     position: relative;
     top: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 .container {
     width: 1160px;
     height: auto;
     margin: 0 auto;
-    font-family: "Montserrat", sans-serif;
 }
 
 .header {
@@ -130,6 +130,7 @@
     width: 168px;
     height: 68px;
     color: #FFFFFF;
+    background-color: #00CBF6;
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
@@ -145,15 +146,16 @@
 }
 
 .exPurButton:hover {
-    background-color: rgba(0, 203, 246, 0.71);
+    background-color: rgba(0, 203, 246, 0.81);
     transition: .2s;
 }
 
 .exPurButton:active {
     background-color: rgb(7, 73, 103);
-    border: none;
+    border-top: none;
     transform: translateY(-2px);
     box-shadow: 0 1px #000;
+    text-shadow: 0 2px #000;
 
 }
 
@@ -278,7 +280,7 @@
 }
 
 .services-list-container {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     box-sizing: border-box;
 
@@ -349,15 +351,42 @@
     bottom: -8px;
 }
 /*--------------------------section-3--purchase--------------------*/
-.purchase {
-    /*background-image: url("../images/Step Project Ham/Sections background/section-2.jpg");*/
-    /*width: 100%;*/
-    /*height: 600px;*/
-    /*background-attachment: fixed;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    /*position: relative;*/
-    /*top: 0;*/
+.purchase-wrapper {
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 340px;
+    padding-top: 100px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+} 
+
+.purchase-title {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    color: #18CFAB;
+    margin-bottom: 40px;
+}
+
+.purchase-desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #D8D8D8;
+    margin-bottom: 70px;
+
+}
+
+.purchase-wrapper img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 477px;
+    object-fit: cover;
+    filter: brightness(35%); 
+    background: #c6dce0;
 }
 
