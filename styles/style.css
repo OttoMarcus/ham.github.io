@@ -29,7 +29,7 @@
 
 .navbar {
     display: flex;
-    height: 100%;
+    /*height: 100%;*/
     justify-content: space-between;
     align-items: center;
 }
@@ -143,6 +143,7 @@
     display: inline-block;
     cursor: pointer;
     outline: none;
+
 }
 
 .exPurButton:hover {
@@ -162,13 +163,13 @@
 .explore {
     background-color: #18CFAB;
     position: absolute;
-    left: 550px;
+    left: 24rem;
 }
 
 .purchase {
     background-color: #00CBF6;
     position: absolute;
-    right: 550px;
+    right: 24rem;
 }
 
 /*---------------------squares--------------------------------------*/
@@ -180,7 +181,6 @@
     left: 0;
     width: 100%;
     height: 340px;
-
 }
 
 .squareItem {
@@ -237,7 +237,6 @@
 
 /* -------------------------OUR SERVICES----------------------------------------- */
 .our-services {
-    margin: 91px 0 91px 0;
     padding: 5px;
     position: relative;
     top: 340px;
@@ -249,50 +248,16 @@
     flex-direction: column;
 }
 
-.title {
-    /*margin-top: var(--height);*/
-    height: 70px;
-    font-size: 34px;
-    font-weight: 400;
-    color: #4E4E4E;
-    margin: 0 auto 67px auto;
-
-}
-
-.our-services::before {
-    content: "";
-    width: 76px;
-    height: 1px;
-    background-color: #18CFAB;
-    position: absolute;
-    top: 70px;
-    left: 46%;
-}
-
-.our-services::after {
-    content: "";
-    width: 76px;
-    height: 1px;
-    background-color: #18CFAB;
-    position: absolute;
-    top: 74px;
-    left: 47%;
-}
-
 .services-list-container {
-    /* width: 100%; */
     height: auto;
     box-sizing: border-box;
-
+    margin-bottom: 91px;
 }
 
 .bookmarks {
-    height: 80px;
-    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 25px;
-
+    justify-content: center;
+    text-transform: capitalize;
 }
 
 .bookmark-item {
@@ -305,13 +270,15 @@
     font-weight: 400;
     color: #717171;
     padding: 0 39px;
+    margin: 30px 0;
     height: 100%;
     background: #f8fcfe;
     position: relative;
+    top: -30px;
 }
 
-
 .text-content {
+    margin-top: 25px;
     width: 100%;
     height: 170px;
 }
@@ -356,7 +323,7 @@
     position: relative;
     left: 0;
     top: 340px;
-    padding-top: 100px;
+    padding-top: 110px;
     /* display: flex;
     flex-direction: column;
     align-items: center; */
@@ -367,15 +334,14 @@
     font-size: 40px;
     font-weight: 700;
     color: #18CFAB;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .purchase-desc {
     font-size: 16px;
     font-weight: 400;
     color: #D8D8D8;
-    margin-bottom: 70px;
-
+    margin-bottom: 80px;
 }
 
 .purchase-wrapper img {
@@ -389,4 +355,126 @@
     filter: brightness(35%); 
     background: #c6dce0;
 }
+/*----------------amazing work-------------------------------*/
+.amazing-work {
+    position: relative;
+    top: 460px;
+    width: 100%;
+    height: auto;
+    background-color: #E9EDEF;
+}
 
+.section-title {
+    position: relative;
+    color: #4E4E4E;
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 96px 0;
+}
+
+.section-title::before {
+    content: "";
+    width: 76px;
+    height: 1px;
+    background-color: #18CFAB;
+    position: absolute;
+    top: 170px;
+    left: 46%;
+}
+
+.section-title::after {
+    content: "";
+    width: 76px;
+    height: 1px;
+    background-color: #18CFAB;
+    position: absolute;
+    top: 174px;
+    left: 47%;
+}
+/*-----------------------amazing tab----------------------*/
+.amazing-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(221, 218, 218, 0.74);
+    font-size: 14px;
+    font-weight: 400;
+    color: #717171;
+    padding: 20px;
+    /*height: 100%;*/
+    margin-bottom: 69px;
+}
+
+.active-tab {
+    border-color:  #18CFAB;
+    color: #18CFAB;
+}
+/*--------------------amazing space----------------------------*/
+
+.amazing-space {
+    /*height: 100%;*/
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    padding-bottom: 5px;
+}
+
+.amazing-space-item {
+    width: auto;
+   --height: 206px;
+    height: var(--height);
+    background: #3c4967;
+}
+
+.amazingSelected:hover {
+
+    border-top: 3px solid #18CFAB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #18CFAB;
+    font-size: 15px;
+    font-weight: 700;
+    background: inherit;
+    height: calc(var(--height) - 3px);
+}
+.amazingSelected {
+
+}
+/*----------------button amazing------------------------------------*/
+.button-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.button-container .exPurButton {
+    padding: 10px 5px 10px 35px;
+}
+
+.button-container::after {
+    content: "";
+    background-image: url("../images/Forma 1.png");
+    position: absolute;
+    left: 45%;
+    top: 25px;
+    width: 25px;
+    height: 25px;
+    opacity: 0.8;
+}
+
+/*-------------------button amazing-------------------------------------*/
+
+.load {
+/*display: none;*/
+}
+
+.svg {
+    opacity: 0;
+}
+
+.svg:hover {
+    opacity: 1;
+}
