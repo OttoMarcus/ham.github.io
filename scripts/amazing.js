@@ -179,51 +179,63 @@ let arrayAmazingAll = [
         category: "wordpress",
         imgUrl: "../images/Step Project Ham/wordpress/wordpress10.jpg",
     },
+
 ];
 
-function amazingTabVisualization(array, objectCategory) {
-let arrayTab = array.filter(obj => obj.category === objectCategory);
+function amazingTabVisualization(array, objectCategory ) {
+    if (objectCategory !== "") {                                           // якщо категорія пусто, тоді ввесь масив
+        array = array.filter(obj => obj.category === objectCategory);
+    }
 
-const halfAmazingItems = arrayTab.slice(0, 12);
-const restAmazingItems = arrayTab.slice(12, arrayTab.length);
-function addAmazingItems(arr) {
+    const halfAmazingItems = array.slice(0, 12);
+    // const restAmazingItems = array.slice(12, array.length);
+    const amazSpaceCont = document.querySelector(".amazing-space");
+
+
+    addAmazingItems(halfAmazingItems);
+
+    function addAmazingItems(arr) {
+
+        amazSpaceCont.innerHTML = '';
         for (let img of arr) {
-            let amazSpaceCont = document.querySelector(".amazing-space");  
-            let item = document.createElement("li");                       
+            let item = document.createElement("li");
             item.classList.add("amazing-space-item");
             amazSpaceCont.appendChild(item);
-            let aSelected = document.createElement("a");                   
+            let aSelected = document.createElement("a");
             aSelected.classList.add("amazingSelected");
             item.appendChild(aSelected);
-
-            const imgElement = document.createElement("img");          
-            imgElement.src = img.imgUrl;                                    
-            // console.log(img.imgUrl);
-
-            aSelected.innerHTML = "";
+            const imgElement = document.createElement("img");
+            imgElement.src = img.imgUrl;
             aSelected.appendChild(imgElement);
-            img += 1;
+        }
+
     }
+// -------------------- догрузка елементів і кнопка--------------------------------------------
+            const amazingBtn = document.querySelector(".load");
+            amazingBtn.addEventListener("click", () => {
+                // addAmazingItems(halfAmazingItems);
+                addAmazingItems(array);
+                document.querySelector(".button-container").style.display = "none";
+                 });
 }
+// ---------------------виклик функції основної--------------------------------------------
 
-addAmazingItems(halfAmazingItems);
+amazingTabVisualization(arrayAmazingAll, "" );
 
-const amazingBtn = document.querySelector(".load");
-amazingBtn.addEventListener("click", (event) => {
-    addAmazingItems(restAmazingItems);
-    document.querySelector(".button-container").style.display = "none";
+// --------------------------------- Listener on tab ------------------------------------------------
 
-}, { once: true });
-}
+const tabContainer = document.querySelector(".amazing-work");
+tabContainer.addEventListener("click", function (event) {
 
-amazingTabVisualization(arrayAmazingAll, "wordpress");
 
-// --------------------------------- Get new array tab------------------------------------------------
-// function amazingItemFilter (array, objectCategory) {
-//     return array.filter(obj => obj.category === objectCategory);
-// }
-// let arrayTab = amazingItemFilter(arrayAmazingAll, "graphicDesign");
-// console.log(arrayTab);
-
+    if (event.target.closest(".amazing-tab")) {
+        const actAmazingTab = document.querySelector(".active-tab");
+        actAmazingTab.classList.remove("active-tab");
+        event.target.classList.add("active-tab");
+        document.querySelector(".button-container").style.display = "flex";
+        const space = event.target.dataset.space;
+        amazingTabVisualization(arrayAmazingAll, space );
+    }
+})
 
 

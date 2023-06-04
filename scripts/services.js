@@ -1,5 +1,5 @@
 document.body.addEventListener("click", function(event) {
-    event.preventDefault()
+    event.preventDefault();
     if  (event.target.closest(".bookmark-item")) {
         const  actTab = document.body.querySelector(".active");
         actTab.classList.remove("active");
