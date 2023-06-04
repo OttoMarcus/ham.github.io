@@ -202,9 +202,10 @@ function amazingTabVisualization(array, objectCategory ) {
             item.classList.add("amazing-space-item");
             amazSpaceCont.appendChild(item);
             let aSelected = document.createElement("a");
-            aSelected.classList.add("amazingSelected");
+            aSelected.classList.add("amazing-selected");
             item.appendChild(aSelected);
-            const imgElement = document.createElement("img");
+            let imgElement = document.createElement("img");
+            imgElement.classList.add("image-style");
             imgElement.src = img.imgUrl;
             aSelected.appendChild(imgElement);
         }
@@ -237,5 +238,46 @@ tabContainer.addEventListener("click", function (event) {
         amazingTabVisualization(arrayAmazingAll, space );
     }
 })
+// -----------------------------------amazing opacity on hover ------------------------------------------------
+
+const amazingA = document.querySelector(".amazing-selected");
+const amazingSpace = document.querySelector(".amazing-space");
+amazingSpace.addEventListener("mouseover", function ( event) {
+if (event.target.closest(".amazing-space-item")) {
+    event.target.classList.add("opacity");
+    // amazingA.innerText = "creative design";
+}
+// let amazingTextHover = document.createElement("h3");
+// amazingTextHover.classList.add("amazingText");
+// amazingA.appendChild(amazingTextHover);
+// console.log(amazingSpace);
+}); /шукаю як додати текст
+// ---------------------------------- remove opacity ------------------------------------------------------
+amazingSpace.addEventListener("mouseout", function ( event) {
+    if (event.target.closest(".amazing-space-item")) {
+        event.target.classList.remove("opacity");
+
+    }
+});
+
+
+
+
+
+
+
+
+
+
+// function addOpacity() {
+//     let imgStyle = document.createElement("h3");
+//     imgStyle.classList.add("amazing-hover-text");
+//     // imgStyle.innerText = "creative design";
+//     amazingSpace.appendChild(imgStyle);
+//     console.log()
+// }
+//
+
+
 
 

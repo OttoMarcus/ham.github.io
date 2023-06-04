@@ -49,7 +49,7 @@
     font-size: 16px;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.7);
-    margin-left: 21px;
+    margin: 0 21px;
     position: relative;
     transition: all 0.25s ease;
 }
@@ -157,7 +157,6 @@
     transform: translateY(-2px);
     box-shadow: 0 1px #000;
     text-shadow: 0 2px #000;
-
 }
 
 .explore {
@@ -424,11 +423,10 @@
 .amazing-space-item {
     width: auto;
    --height: 206px;
-    height: var(--height);
-    background: #3c4967;
+    position: relative;
 }
 
-.amazingSelected:hover {
+.amazing-selected:hover {
 
     border-top: 3px solid #18CFAB;
     display: flex;
@@ -437,11 +435,19 @@
     color: #18CFAB;
     font-size: 15px;
     font-weight: 700;
-    background: inherit;
     height: calc(var(--height) - 3px);
 }
-.amazingSelected {
 
+/*.amazing-hover {*/
+
+/*}*/
+
+.image-style {
+/*position: absolute;*/
+}
+
+.opacity {
+    opacity: 0.03;
 }
 /*----------------button amazing------------------------------------*/
 .button-container {
@@ -478,3 +484,4 @@
 .svg:hover {
     opacity: 1;
 }
+
