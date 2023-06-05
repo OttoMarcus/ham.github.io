@@ -243,45 +243,31 @@ tabContainer.addEventListener("click", function (event) {
 const amazingA = document.querySelector(".amazing-selected");
 const amazingSpace = document.querySelector(".amazing-space");
 amazingSpace.addEventListener("mouseover", function ( event) {
-if (event.target.closest(".amazing-space-item")) {
+if (event.target.closest(".image-style")) {
     event.target.classList.add("opacity");
-    const textOnHover = document.createElement("h3");
-    textOnHover.remove();
-   
-    textOnHover.classList.add("textOnHover");
-    event.target.appendChild(textOnHover);
+
+    // const textOnHover = document.createElement("h3");
+    // textOnHover.classList.add("textOnHover");
+    // event.target.appendChild(textOnHover);
+    // textOnHover.innerText = "creative design";
+    // console.log(textOnHover);
+
     // event.target.innerText = "creative design";
 }
 // let amazingTextHover = document.createElement("h3");
 // amazingTextHover.classList.add("amazingText");
 // amazingA.appendChild(amazingTextHover);
-console.log(amazingA);
+
 });
 // ---------------------------------- remove opacity ------------------------------------------------------
 amazingSpace.addEventListener("mouseout", function ( event) {
     if (event.target.closest(".amazing-space-item")) {
         event.target.classList.remove("opacity");
-
+    // const textOnHover =document.querySelector(".textOnHover");
+    //     textOnHover.remove();
     }
 });
 
-
-
-
-
-
-
-
-
-
-// function addOpacity() {
-//     let imgStyle = document.createElement("h3");
-//     imgStyle.classList.add("amazing-hover-text");
-//     // imgStyle.innerText = "creative design";
-//     amazingSpace.appendChild(imgStyle);
-//     console.log()
-// }
-//
 
 
 
