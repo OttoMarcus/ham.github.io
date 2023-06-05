@@ -123,7 +123,12 @@
 }
 
 .ex-pur-container {
+    display: flex;
+    justify-content: space-between;
     margin-top: 127px;
+    width: 500px;
+    height: auto;
+    box-sizing: border-box;
 }
 
 .exPurButton {
@@ -161,14 +166,10 @@
 
 .explore {
     background-color: #18CFAB;
-    position: absolute;
-    left: 24rem;
 }
 
 .purchase {
     background-color: #00CBF6;
-    position: absolute;
-    right: 24rem;
 }
 
 /*---------------------squares--------------------------------------*/
@@ -239,7 +240,6 @@
     padding: 5px;
     position: relative;
     top: 340px;
-    width: 100%;
     height: auto;
     padding: 5px;
     display: flex;
