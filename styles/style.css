@@ -323,9 +323,6 @@
     left: 0;
     top: 340px;
     padding-top: 110px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 } 
 
 .purchase-title {
@@ -402,7 +399,6 @@
     font-weight: 400;
     color: #717171;
     padding: 20px;
-    /*height: 100%;*/
     margin-bottom: 69px;
 }
 
@@ -413,7 +409,6 @@
 /*--------------------amazing space----------------------------*/
 
 .amazing-space {
-    /*height: 100%;*/
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 70px;
@@ -438,12 +433,9 @@
     height: calc(var(--height) - 3px);
 }
 
-/*.amazing-hover {*/
-
-/*}*/
 
 .image-style {
-/*position: absolute;*/
+position: relative;
 }
 
 .opacity {

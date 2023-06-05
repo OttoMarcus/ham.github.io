@@ -245,12 +245,17 @@ const amazingSpace = document.querySelector(".amazing-space");
 amazingSpace.addEventListener("mouseover", function ( event) {
 if (event.target.closest(".amazing-space-item")) {
     event.target.classList.add("opacity");
-    // amazingA.innerText = "creative design";
+    const textOnHover = document.createElement("h3");
+    textOnHover.remove();
+   
+    textOnHover.classList.add("textOnHover");
+    event.target.appendChild(textOnHover);
+    // event.target.innerText = "creative design";
 }
 // let amazingTextHover = document.createElement("h3");
 // amazingTextHover.classList.add("amazingText");
 // amazingA.appendChild(amazingTextHover);
-// console.log(amazingSpace);
+console.log(amazingA);
 });
 // ---------------------------------- remove opacity ------------------------------------------------------
 amazingSpace.addEventListener("mouseout", function ( event) {
