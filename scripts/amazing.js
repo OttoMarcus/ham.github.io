@@ -251,7 +251,7 @@ if (event.target.closest(".amazing-space-item")) {
 // amazingTextHover.classList.add("amazingText");
 // amazingA.appendChild(amazingTextHover);
 // console.log(amazingSpace);
-}); /шукаю як додати текст
+});
 // ---------------------------------- remove opacity ------------------------------------------------------
 amazingSpace.addEventListener("mouseout", function ( event) {
     if (event.target.closest(".amazing-space-item")) {
