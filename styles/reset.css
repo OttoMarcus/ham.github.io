@@ -1,11 +1,6 @@
 * { margin:0;
     padding: 0;}
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 image {
     vertical-align: top;
 
@@ -19,17 +14,13 @@ li {
 
 *::after,
 *::before {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 html,
 body {
     height: 100%;
 }
-
-/**, *::before, *::after {*/
-/*    box-sizing: border-box;*/
-/*}*/
 
 img, picture, video, canvas, svg {
     display: block;

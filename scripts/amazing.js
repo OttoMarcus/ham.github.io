@@ -245,26 +245,16 @@ const amazingSpace = document.querySelector(".amazing-space");
 amazingSpace.addEventListener("mouseover", function ( event) {
 if (event.target.closest(".image-style")) {
     event.target.classList.add("opacity");
-
-    // const textOnHover = document.createElement("h3");
-    // textOnHover.classList.add("textOnHover");
-    // event.target.appendChild(textOnHover);
-    // textOnHover.innerText = "creative design";
-    // console.log(textOnHover);
-
-    // event.target.innerText = "creative design";
 }
-// let amazingTextHover = document.createElement("h3");
-// amazingTextHover.classList.add("amazingText");
-// amazingA.appendChild(amazingTextHover);
 
+console.log(amazingA);
 });
+
+const textOnHover = document.querySelector(".textOnTabs");
 // ---------------------------------- remove opacity ------------------------------------------------------
 amazingSpace.addEventListener("mouseout", function ( event) {
     if (event.target.closest(".amazing-space-item")) {
         event.target.classList.remove("opacity");
-    // const textOnHover =document.querySelector(".textOnHover");
-    //     textOnHover.remove();
     }
 });
 
