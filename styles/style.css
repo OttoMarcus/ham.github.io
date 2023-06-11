@@ -621,26 +621,84 @@
 .aboutUs {
     display: flex;
     flex-direction: column;
-    /*width: 100%;*/
-    /*height: auto;*/
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
 }
 
-
-.resume {
-    margin-top: 38px;
-    font-size: 16px;
+.article {
+    display: none;
+    font-size: 14px;
     font-weight: 300;
-    color: #BBBBBB;
+    color: rgba(187, 187, 187, 0.88);
+    line-height: 27px;
+}
+
+.article.active {
+    display: block;
+}
+
+.biography {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 190px;
+    box-sizing: border-box;
+    margin: 16px 0;
+    overflow: auto;
+}
+
+.position {
+    color: #3CB878;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    top: -35px;
+    text-transform: uppercase;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider img {
+    border: 8px solid rgba(9, 80, 66, 0.82);
+    border-radius: 50%;
+    width: 133px;
+    height: 133px;
+    object-fit: cover;
+    margin: 5px;
+}
+
+.slider img:hover {
+    box-shadow: 0 0 2px 1px rgb(201, 220, 210);
+    transition: all .25s ease;
 }
 
 .slick-container {
-    
+    /*position: absolute;*/
+    /*top: 300px;*/
+    /*left: 0;*/
+    /*display: block;*/
+    /*!*justify-content: center;*!*/
+    width: 500px;
 }
 
+.portraitSmall img{
+    width: 73px;
+    height: 73px;
+    border: 3px solid rgba(9, 80, 66, 0.82);
+    margin: 12px 0 3px -40px;
+}
 
+.portraitBig {
+    margin-left: calc(50% - 70px);
+}
+
+.up {
+transform: translateY(-11px);
+}
 /*--------------------------footer--------------------------------------------*/
 .footer {
     display: flex;
@@ -650,7 +708,6 @@
     font-size: 14px;
     font-weight: 300;
     position: relative;
-    margin-top: 67px;
     background: #22353F;
     height: 118px;
 }
