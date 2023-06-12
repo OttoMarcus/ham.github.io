@@ -1,12 +1,13 @@
 
 let arrayOfPortraits = [
     {
-        name: "Vitalik Buterin",
-        imgUrl: "../images/Step Project Ham/portraits/Vitalik.jpg",
-        resume: "Vitalik Buterin (Russian: Вита́лик Буте́рин, born 31 January[2] 1994), is a Russian-Canadian " +
-            "computer programmer, and founder of Ethereum. Buterin became involved with cryptocurrency early in " +
-            "its inception, co-founding Bitcoin Magazine in 2011. In 2014, Buterin deployed the Ethereum blockchain " +
-            "with Dimitry Buterin,[citation needed] Gavin Wood, Charles Hoskinson, Anthony Di Iorio, and Joseph Lubin."
+        name: "Bjarne Stroustrup",
+        imgUrl: "../images/Step Project Ham/portraits/stro.png",
+        resume: "Bjarne Stroustrup is the designer and original implementer of C++ as well as the author" +
+         "of The C++ Programming Language (Fourth Edition), A Tour of C++ (Second edition), Programming: Principles:" +
+          "and Practice using C++ (Second Edition), and many popular and academic publications. For 30 years," +
+          "C++ has been one of the most widely used programming languages. He is actively involved in "+
+          "the ISO standardization of C++."
     },
 
     {
@@ -78,12 +79,19 @@ let arrayOfPortraits = [
 ]
 
 const biography_container = document.querySelector(".biography");
+const position = document.querySelector(".position");
 function addBiography(arr) {
     for (let txt of arr) {
         let article = document.createElement("div");
         article.classList.add("article");
         biography_container.appendChild(article);
         article.innerText = txt.resume;
+
+      
+        let pName = document.createElement("p");
+        pName.classList.add("pName");
+        position.appendChild(pName);
+        pName.innerHTML = txt.name;
     }
 }
 

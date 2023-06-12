@@ -23,6 +23,10 @@ $(document).ready(function(){
         let articles = $('.biography').find('.article');
         articles.removeClass('active');
         $(articles[currentSlide]).addClass('active');
+
+        let position = $('.position').find('.pName');
+        position.removeClass('active');
+        $(position[currentSlide]).addClass('active');
     });
 
 });

@@ -419,7 +419,6 @@
     width: auto;
    --height: 206px;
     position: relative;
-   
 }
 
 .amazing-space-item:hover{
@@ -597,9 +596,6 @@
 /*------------------------------- Say About -------------------------------------------------*/
 .say-about {
     position: relative;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
 }
 
 .say-about > img {
@@ -638,24 +634,31 @@
 }
 
 .biography {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 190px;
     box-sizing: border-box;
-    margin: 16px 0;
+    margin-top: 20px;
     overflow: auto;
 }
 
 .position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #3CB878;
     font-size: 16px;
     font-weight: 700;
     position: relative;
     top: -35px;
     text-transform: uppercase;
+}
+
+.pName {
+    display: none;
+}
+
+.pName.active {
+    display: block;
 }
 
 .slider {
@@ -677,11 +680,6 @@
 }
 
 .slick-container {
-    /*position: absolute;*/
-    /*top: 300px;*/
-    /*left: 0;*/
-    /*display: block;*/
-    /*!*justify-content: center;*!*/
     width: 500px;
 }
 
@@ -693,7 +691,7 @@
 }
 
 .portraitBig {
-    margin-left: calc(50% - 70px);
+    margin-left: calc(50% - 76px);
 }
 
 .up {
